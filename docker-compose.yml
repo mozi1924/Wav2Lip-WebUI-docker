@@ -1,0 +1,16 @@
+version: "2.0" 
+services:
+  wav2lip:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: wav2lip
+    ports:
+      - 7363:7363
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

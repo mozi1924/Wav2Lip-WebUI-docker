@@ -251,4 +251,4 @@ with gr.Blocks() as ui:
         [video, grAudio, checkpoint, no_smooth, resize_factor, pad_top, pad_bottom, pad_left, pad_right], 
         result)
 
-ui.launch(inbrowser=True)
+ui.launch(server_name="0.0.0.0",server_port=7363)
